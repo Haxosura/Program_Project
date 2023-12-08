@@ -1,10 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+
 #pragma once
 
 #include "CoreMinimal.h"
 #include "BehaviorTree/Tasks/BTTask_BlackboardBase.h"
 #include "Enemy_BTTask_FindPatrolPath.generated.h"
 
+/**
+ *
+ */
 UCLASS()
 class PROGRAM_PROJECT_API UEnemy_BTTask_FindPatrolPath : public UBTTask_BlackboardBase
 {

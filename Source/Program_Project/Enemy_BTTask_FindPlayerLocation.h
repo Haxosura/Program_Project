@@ -13,5 +13,17 @@ UCLASS()
 class PROGRAM_PROJECT_API UEnemy_BTTask_FindPlayerLocation : public UBTTask_BlackboardBase
 {
 	GENERATED_BODY()
+
+public:
+	explicit UEnemy_BTTask_FindPlayerLocation(FObjectInitializer const& ObjectInitializer);
+
+private:
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Search", meta = (AllowPrivateAccess = "true"));
+	bool SearchRandom = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Search", meta = (AllowPrivateAccess = "true"));
+	float SearchRadius = 1500.f;
 	
 };

@@ -15,6 +15,8 @@ AEnemy_AIController::AEnemy_AIController()
 {
     BehaviorTreeComponent = CreateDefaultSubobject<UBehaviorTreeComponent>(TEXT("Behavior Tree Component"));
     BlackboardComponent = CreateDefaultSubobject<UBlackboardComponent>(TEXT("Blackboard Component"));
+
+    SetupPerceptionSystem();
 }
 
 void AEnemy_AIController::BeginPlay()
